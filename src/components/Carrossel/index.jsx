@@ -3,8 +3,8 @@ import { motion, useMotionValue, useTransform } from "motion/react";
 import "./Carrossel.css";
 
 import Bruno1 from "../../assets/bruno/bruno-1.webp";
-import Bruno2 from "../../assets/bruno/bruno-2.webp";
-import Bruno3 from "../../assets/bruno/bruno-3.webp";
+import Bruno2 from "../../assets/bruno/bruno-2.jpg";
+import Bruno3 from "../../assets/bruno/bruno-3.jpg";
 import Bruno4 from "../../assets/bruno/bruno-4.webp";
 import Bruno5 from "../../assets/bruno/bruno-5.webp";
 import Ebook1 from "../../assets/ebook/ebook-1.webp";
@@ -20,11 +20,11 @@ const ITEMS = {
   },
   {
     src: Bruno2,
-    alt: "Cachorro do Bruno ao lado de um troféu",
+    alt: "Bruno com os cachorros de Ana Hickmann",
   },
   {
     src: Bruno3,
-    alt: "Cachorro do Bruno com uma medalha",
+    alt: "Cachorro do Bruno com três medalhas",
   },
   {
     src: Bruno4,

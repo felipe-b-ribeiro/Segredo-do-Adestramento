@@ -16,6 +16,13 @@ export const SC_Main = styled.main`
   text-align: center;
   z-index: 1;
 
+  @media (min-width: 768px) {
+    grid-template-columns:
+    [breakout-start] 20vw
+    [content-start] 60vw [content-end]
+    20vw [breakout-end];
+  }
+
   > * {
     z-index: 1;
     grid-column: content;
@@ -40,12 +47,16 @@ export const SC_Main = styled.main`
 
   > .secondary {
     position: relative;
-    padding: 0 30px 30px;
+    padding: 0 7vw 30px;
     color: black;
     display: flex;
     align-items: center;
     flex-direction: column;
     z-index: 0;
+
+    @media (min-width: 1024px) {
+      padding: 0 20vw 30px;
+    }
 
     & strong {
       color: #1e9587;
@@ -63,8 +74,10 @@ export const SC_Main = styled.main`
     > .card-grid {
       display: grid;
       grid-template-columns: 47.5% 47.5%;
+      grid-column: content;
       gap: 20px 5%;
       position: relative;
+      width: 100%;
 
       & div {
         &:nth-child(1) {grid-area: 1 / 1;}

@@ -1,7 +1,7 @@
 import "sal.js/dist/sal.css";
 import { FaPaw } from "react-icons/fa";
 import { SC_Main } from "./styles";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import Card from "../../components/Card";
 import Carrossel from "../../components/Carrossel";
 import CTA from "../../components/CTA";
@@ -21,7 +21,26 @@ const Index = () => {
     });
   }, []);
 
-  const viewportWidth = document.documentElement.clientWidth * 0.88;
+  const [viewportWidth, setViewportWidth] = useState(document.documentElement.clientWidth * 0.88)
+
+  useEffect(() => {
+    let timeout;
+    const handleResize = () => {
+      clearTimeout(timeout)
+
+      timeout = setTimeout(() => {
+        setViewportWidth(document.documentElement.clientWidth * 0.88);
+      }, 200)
+    }
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    }
+  }, [])
+
+  const gridWidth = viewportWidth <= 1024 ? viewportWidth * 0.86 : viewportWidth * 0.40;
 
   return (
     <>
@@ -84,7 +103,7 @@ const Index = () => {
           </h1>
           <Carrossel
             dataSal="zoom-in"
-            baseWidth={viewportWidth < 768 ? viewportWidth : viewportWidth < 1024 ? '700' : '500'}
+            baseWidth={gridWidth}
             autoplay={true}
             autoplayDelay={3000}
             pauseOnHover={true}
@@ -188,7 +207,7 @@ const Index = () => {
           dataSal="zoom-in"
           itemsType="ebook"
           black={true}
-          baseWidth={viewportWidth < 768 ? viewportWidth : viewportWidth < 1024 ? '700' : '500'}
+          baseWidth={gridWidth}
           autoplay={true}
           autoplayDelay={3000}
           pauseOnHover={true}

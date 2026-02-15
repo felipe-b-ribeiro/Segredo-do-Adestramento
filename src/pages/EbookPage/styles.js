@@ -18,9 +18,9 @@ export const SC_Main = styled.main`
 
   @media (min-width: 768px) {
     grid-template-columns:
-    [breakout-start] 20vw
-    [content-start] 60vw [content-end]
-    20vw [breakout-end];
+      [breakout-start] 20vw
+      [content-start] 60vw [content-end]
+      20vw [breakout-end];
   }
 
   > * {
@@ -68,7 +68,7 @@ export const SC_Main = styled.main`
       text-align: left;
       width: 90%;
       margin-bottom: 20px;
-      max-width: min(100%, 700px)
+      max-width: min(100%, 700px);
     }
 
     > .card-grid {
@@ -80,14 +80,30 @@ export const SC_Main = styled.main`
       width: 100%;
 
       & div {
-        &:nth-child(1) {grid-area: 1 / 1;}
-        &:nth-child(2) {grid-area: 2 / 2;}
-        &:nth-child(3) {grid-area: 3 / 1;}
-        &:nth-child(4) {grid-area: 4 / 2;}
-        &:nth-child(5) {grid-area: 5 / 1;}
-        &:nth-child(6) {grid-area: 6 / 2;}
-        &:nth-child(7) {grid-area: 7 / 1;}
-        &:nth-child(8) {grid-area: 8 / 2;}
+        &:nth-child(1) {
+          grid-area: 1 / 1;
+        }
+        &:nth-child(2) {
+          grid-area: 2 / 2;
+        }
+        &:nth-child(3) {
+          grid-area: 3 / 1;
+        }
+        &:nth-child(4) {
+          grid-area: 4 / 2;
+        }
+        &:nth-child(5) {
+          grid-area: 5 / 1;
+        }
+        &:nth-child(6) {
+          grid-area: 6 / 2;
+        }
+        &:nth-child(7) {
+          grid-area: 7 / 1;
+        }
+        &:nth-child(8) {
+          grid-area: 8 / 2;
+        }
       }
     }
 
@@ -120,7 +136,7 @@ export const SC_Main = styled.main`
     &:nth-of-type(4) {
       &::before {
         top: -10%;
-        height: 107%;
+        height: 109%;
         transform: rotate(0deg);
       }
     }
@@ -138,35 +154,36 @@ export const SC_Main = styled.main`
       flex-direction: column;
       border: 1px solid #545454;
       border-radius: 10px;
-      transition: 0.5s ease;
       width: 100%;
+      padding: 10px;
       font-size: clamp(15px, 2vw + 2.5px, 20px);
+      transition: all 0.4s ease-in-out;
+      overflow: hidden;
 
-      &[open] > p {
-        max-height: 500px;
-        opacity: 1;
-        padding: 0 10px;
+      &[open] {
+        border-color: black;
+        background-color: rgba(0, 0, 0, 0.1);
+
+        > summary {
+          margin-bottom: 7px;
+        }
       }
 
       > p {
         font-size: inherit;
         text-align: left;
-        padding-left: 23px;
         max-width: 100%;
-        max-height: 0;
-        opacity: 0;
-        overflow: hidden;
-        transition: all 0.3s ease;
-        padding: 0 10px;
+        opacity: 1;
+        margin: 0;
       }
     }
 
     & summary {
       width: 100%;
-      padding: 10px;
       text-align: left;
-      
+      transition: 0.5s ease-in-out;
     }
+
   }
 
   > .logo {
@@ -241,10 +258,10 @@ export const SC_Main = styled.main`
         display: flex;
         flex-direction: column;
         gap: 5px;
-        
+
         > a {
-        text-decoration: underline;
-      }
+          text-decoration: underline;
+        }
       }
       > span:nth-child(2) {
         max-width: 70%;

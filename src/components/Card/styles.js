@@ -8,9 +8,11 @@ export const SC_Card = styled.div`
   padding: 20px 4px;
   width: 100%;
   font-size: clamp(16px, 2vw + 2px, 22px);
-  height: 108px;
+  min-height: 108px;
   align-items: center;
   display: flex;
+  gap: 10px;
   justify-content: center;
   position: relative;
+  flex-direction: column;
 `;

@@ -70,7 +70,7 @@ export const SC_OfertaCard2 = styled.div`
         max-width: 100%;
         display: inline-block;
         line-height: 1;
-        margin-bottom: 8px;
+        margin-bottom: 10px;
       }
     }
 

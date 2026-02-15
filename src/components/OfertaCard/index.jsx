@@ -68,16 +68,16 @@ const Index = ({ card, dataSal }) => {
               data-sal-duration="800"
             /> 
             <span data-sal="fade" data-sal-duration="800" data-sal-delay='500'>
-              Acesso imediato.
+              Acesso imediato via e-mail.
             </span> 
             <br />
           </p>
           <h1 data-sal="zoom-out">Tudo isso por apenas...</h1>
           <div data-sal="zoom-out" data-aos-duration="800">
             <h1>
-              12x de <strong>R$9,68</strong>
+              12x de <strong>R$6,71</strong>
             </h1>
-            <h5>ou R$97,90 à vista</h5>
+            <h5>ou R$67,90 à vista</h5>
             <div className="forma-pag">
               <span>
                 <FaRegCreditCard color="white" size={25} />

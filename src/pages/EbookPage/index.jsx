@@ -2,13 +2,12 @@ import "sal.js/dist/sal.css";
 import { FaPaw } from "react-icons/fa";
 import { SC_Main } from "./styles";
 import { useState, useEffect } from "react";
-import Card from "../../components/Card";
+import Cards from "../../components/Cards";
 import Carrossel from "../../components/Carrossel";
 import CTA from "../../components/CTA";
 import Instagram from "../../assets/instagram.png";
 import Logo from "../../assets/logo.webp";
 import sal from "sal.js";
-import Paws from "../../components/Paws";
 import OfertaCard from "../../components/OfertaCard";
 import Selo from "../../components/Selo";
 import SuporteSection from "../../components/SuporteSection";
@@ -21,26 +20,29 @@ const Index = () => {
     });
   }, []);
 
-  const [viewportWidth, setViewportWidth] = useState(document.documentElement.clientWidth * 0.88)
+  const [viewportWidth, setViewportWidth] = useState(
+    document.documentElement.clientWidth * 0.88,
+  );
 
   useEffect(() => {
     let timeout;
     const handleResize = () => {
-      clearTimeout(timeout)
+      clearTimeout(timeout);
 
       timeout = setTimeout(() => {
         setViewportWidth(document.documentElement.clientWidth * 0.88);
-      }, 200)
-    }
+      }, 200);
+    };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
-    }
-  }, [])
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
-  const gridWidth = viewportWidth <= 1024 ? viewportWidth * 0.86 : viewportWidth * 0.40;
+  const gridWidth =
+    viewportWidth <= 1024 ? viewportWidth * 0.86 : viewportWidth * 0.4;
 
   return (
     <>
@@ -68,7 +70,7 @@ const Index = () => {
           alt="Logo do Bruno Moreno"
         />
         <h1 data-sal="zoom-out" data-sal-duration="2000" className="headline">
-          Nunca mais sofra com 
+          Nunca mais sofra com
           <strong> xixi e cocô no lugar errado</strong>!
         </h1>
         <iframe
@@ -98,8 +100,7 @@ const Index = () => {
         />
         <section className="secondary breakout">
           <h1 data-sal="zoom-out" className="subheadline">
-            Quem é o Bruno?
-            Por que confiar?
+            Quem é o Bruno? Por que confiar?
           </h1>
           <Carrossel
             dataSal="zoom-in"
@@ -149,42 +150,7 @@ const Index = () => {
           <h1 data-sal="zoom-out" className="subheadline">
             O que você pode esperar do nosso ebook?
           </h1>
-          <section className="card-grid">
-            <Card
-              dataSal="zoom-in"
-              text="Suporte¹ diretamente com o autor (Bruno Moreno)"
-            >
-              <Paws dataSal="fade" data-sal-duration="1000" />
-            </Card>
-            <Card
-              dataSal="zoom-in"
-              text="Passo a passo simplificado (fácil de entender)"
-            >
-              <Paws dataSal="fade" className="mirrored" />
-            </Card>
-            <Card dataSal="zoom-in" text="Método com base científica">
-              <Paws dataSal="fade" />
-            </Card>
-            <Card dataSal="zoom-in" text="Funciona em qualquer tipo de moradia">
-              <Paws dataSal="fade" className="mirrored" />
-            </Card>
-            <Card
-              dataSal="zoom-in"
-              text="Xixi e cocô no lugar certo na média de 15 a 20 dias²"
-            >
-              <Paws dataSal="fade" />
-            </Card>
-            <Card
-              dataSal="zoom-in"
-              text="Funciona se outros métodos não deram certo"
-            >
-              <Paws dataSal="fade" className="mirrored" />
-            </Card>
-            <Card dataSal="zoom-in" text="Funciona para leigos">
-              <Paws dataSal="fade" />
-            </Card>
-            <Card dataSal="zoom-in" text="Funciona para qualquer raça"></Card>
-          </section>
+          <Cards />
           <CTA dataSal="zoom-in" text="Quero adquirir agora!" />
           <small data-sal="fade">
             <strong>1-</strong> Suporte diretamente com ele depois da compra do
@@ -200,7 +166,7 @@ const Index = () => {
         <p data-sal="fade">
           O método usado no ebook é o do <strong>reforço positivo</strong>. Que
           consiste em recompensar as ações que você quer que seu cachorro
-          repita. O produto está separado em <strong>três capítulos</strong> 
+          repita. O produto está separado em <strong>três capítulos</strong>
           (ele possui <strong>xx páginas</strong>):
         </p>
         <Carrossel
@@ -316,7 +282,7 @@ const Index = () => {
             </span>
             <span>
               <strong>Pirataria é crime</strong>, portanto copiar, recriar ou
-              redistribuir o produto sem a devida permissão é 
+              redistribuir o produto sem a devida permissão é
               <strong> proibido</strong>.
             </span>
             <img

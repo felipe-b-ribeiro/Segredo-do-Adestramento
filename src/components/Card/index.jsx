@@ -1,10 +1,10 @@
 import { SC_Card } from './styles';
 
-const Index = ({text, children, dataSal}) => {
+const Index = ({text, paws, dataSal, icon}) => {
   return (
     <SC_Card data-sal={dataSal}>
-        {text}
-        {children}
+        {icon}{text}
+        {paws}
     </SC_Card>
   )
 }

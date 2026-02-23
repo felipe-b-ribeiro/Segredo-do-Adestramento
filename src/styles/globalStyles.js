@@ -28,9 +28,6 @@ const globalStyles = createGlobalStyle`
         text-decoration: none;
         color: inherit;
     }
-
-    .mb-40 {margin-bottom: 40px !important;}
-    .mb-20 {margin-bottom: 20px !important;}
 `;
 
 export default globalStyles;

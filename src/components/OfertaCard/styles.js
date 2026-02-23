@@ -77,6 +77,7 @@ export const SC_OfertaCard2 = styled.div`
     > p:last-child {
       text-align: center;
       margin: 0;
+      font-size: min(3.5vw, 20px);
       > strong {
         color: #ff701f;
       }

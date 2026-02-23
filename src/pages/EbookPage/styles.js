@@ -182,6 +182,8 @@ export const SC_Main = styled.main`
       width: 100%;
       text-align: left;
       transition: 0.5s ease-in-out;
+
+      &:hover {user-select: none; cursor: pointer}
     }
 
   }
@@ -248,7 +250,7 @@ export const SC_Main = styled.main`
       gap: 20px;
       align-items: center;
       width: min(100%, 500px);
-      font-size: clamp(15px, 2vw + 2.5px, 20px);
+      font-size: clamp(15px, 2vw + 2.5px, 17px);
 
       > img {
         margin: 10px 0;

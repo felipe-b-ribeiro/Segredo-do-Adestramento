@@ -276,9 +276,9 @@ const Index = () => {
         <footer className="breakout">
           <p>
             <span>
-              <a href="">Política de Privacidade</a>
-              <a href="">Termos de Uso</a>
-              <a href="">Política de Reembolso</a>
+              <a href="/privacidade">Política de Privacidade</a>
+              <a href="/termos">Termos de Uso</a>
+              <a href="/reembolso">Política de Reembolso</a>
             </span>
             <span>
               <strong>Pirataria é crime</strong>, portanto copiar, recriar ou
